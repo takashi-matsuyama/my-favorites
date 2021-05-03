@@ -2,7 +2,7 @@
 * Author: Takashi Matsuyama
 * Author URI: https://profiles.wordpress.org/takashimatsuyama/
 * Description: WordPressでお気に入りの投稿の一覧を表示
-* Version: 1.0.0
+* Version: 1.0.0 or later
 */
 
 /*

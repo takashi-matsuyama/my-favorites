@@ -2,7 +2,7 @@
 * Author: Takashi Matsuyama
 * Author URI: https://profiles.wordpress.org/takashimatsuyama/
 * Description: WordPressでお気に入りの投稿をローカルストレージとMySQLのユーザーメタに保存（クリックで保存と削除を切替/一括削除）
-* Version: 1.0.0
+* Version: 1.0.0 or later
 */
 
 /* グローバルネームスペース */

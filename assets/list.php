@@ -54,9 +54,9 @@ if( ! class_exists( 'CCC_My_Favorite_List' ) ) {
       <a href="<?php the_permalink(); ?>">
         <?php
           if( has_post_thumbnail() ) {
-            echo '<div class="img-post-thumbnail" style="background-image: url('.get_the_post_thumbnail_url($the_query->post->ID, 'large').');"></div>';
+            echo '<div class="img-post-thumbnail has_post_thumbnail"><img src="'.get_the_post_thumbnail_url($the_query->post->ID, 'large').'" alt="'.$the_query->post->post_title.'" loading="lazy" /></div>';
           } else {
-            echo '<div class="img-post-thumbnail" style="background-image: url('.CCC_Post_Thumbnail::get_first_image_url($the_query->post).');"></div>';
+            echo '<div class="img-post-thumbnail has_post_thumbnail-no"><img src="'.CCC_Post_Thumbnail::get_first_image_url($the_query->post).'" alt="'.$the_query->post->post_title.'" loading="lazy" /></div>';
           }
         ?>
       </a>

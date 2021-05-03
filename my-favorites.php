@@ -3,7 +3,7 @@
  * Plugin Name: My Favorites
  * Plugin URI: https://wordpress.org/plugins/my-favorites/
  * Description: Save user's favorite posts and list them.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Requires at least: 4.8
  * Requires PHP: 5.4.0
  * Author: Takashi Matsuyama
@@ -53,9 +53,9 @@ if( ! class_exists( 'CCC_My_Favorite' ) ) {
 
   /*** How to use this Shortcode ***/
   /*
-  * [ccc_my_favorite_select_button post_id="int" text="string" style=""]
-  * [ccc_my_favorite_list_menu slug="string" text="string" style=""]
-  * [ccc_my_favorite_list_results class="string" style=""]
+  * [ccc_my_favorite_select_button post_id="int" text="string" style="string"]
+  * [ccc_my_favorite_list_menu slug="string" text="string" style="string"]
+  * [ccc_my_favorite_list_results class="string" style="string"]
   */
   require( CCCMYFAVORITE_PLUGIN_PATH .'/assets/shortcode-select.php' );
   require( CCCMYFAVORITE_PLUGIN_PATH .'/assets/shortcode-list.php' );

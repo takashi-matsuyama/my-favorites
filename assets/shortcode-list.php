@@ -36,6 +36,11 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
     } //endfunction
 
     public static function results($atts) {
+      wp_enqueue_style( 'ccc_my_favorite-select' );
+      wp_enqueue_script( 'ccc_my_favorite-select' );
+      wp_enqueue_style( 'ccc_my_favorite-list' );
+      wp_enqueue_script( 'ccc_my_favorite-list' );
+
       $atts = shortcode_atts(array(
         "class" => '',
         "posts_per_page" => '',

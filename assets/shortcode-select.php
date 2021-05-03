@@ -10,6 +10,9 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_Select' ) ) {
   class CCC_My_Favorite_ShortCode_Select {
 
     public static function button($atts) {
+      wp_enqueue_style( 'ccc_my_favorite-select' );
+      wp_enqueue_script( 'ccc_my_favorite-select' );
+
       $atts = shortcode_atts(array(
         "post_id" => '',
         "text" => '',

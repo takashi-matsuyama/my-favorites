@@ -30,15 +30,13 @@ class CCC_My_Favorite {
   } //endfunction
 
   public function select_styles() {
-    wp_enqueue_style( 'ccc_my_favorite-select-css', CCCMYFAVORITE_PLUGIN_URL.'/assets/select.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
+    wp_register_style( 'ccc_my_favorite-select', CCCMYFAVORITE_PLUGIN_URL.'/assets/select.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
   } //endfunction
 
   public function select_scripts() {
-    $handle = 'ccc_my_favorite-select-js';
+    $handle = 'ccc_my_favorite-select';
     $file = 'select.js';
     wp_register_script( $handle, CCCMYFAVORITE_PLUGIN_URL.'/assets/'.$file, array( 'jquery' ), CCCMYFAVORITE_PLUGIN_VERSION, true );
-    wp_enqueue_script( $handle );
-
     $action_update = 'ccc_my_favorite-update-action';
     wp_localize_script( $handle, 'CCC_MY_FAVORITE_UPDATE',
                        array(
@@ -48,7 +46,6 @@ class CCC_My_Favorite {
                          'user_logged_in' => is_user_logged_in()
                        )
                       );
-
     $action_get = 'ccc_my_favorite-get-action';
     wp_localize_script( $handle, 'CCC_MY_FAVORITE_GET',
                        array(
@@ -87,30 +84,14 @@ class CCC_My_Favorite {
     die(); //メッセージは無しで現在のスクリプトを終了する（メッセージは空にする）
   } //endfunction
 
-
-
-
   public function list_styles() {
-    $page = get_post();
-    $page_slug = $page->post_name;
-    $page_template = get_page_template_slug();
-    if( ( strpos($page_slug, 'favorite') !== false ) or ( strpos($page_template, 'ccc-favorite') !== false ) ) {
-      //$page_slug に 'favorite' が含まれているか、もしくは、$page_template に 'ccc-favorite' が含まれている場合
-      wp_enqueue_style( 'ccc_my_favorite-list-css', CCCMYFAVORITE_PLUGIN_URL.'/assets/list.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
-    } //endif
+    wp_register_style( 'ccc_my_favorite-list', CCCMYFAVORITE_PLUGIN_URL.'/assets/list.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
   } //endfunction
 
   public function list_scripts() {
-    $page = get_post();
-    $page_slug = $page->post_name;
-    $page_template = get_page_template_slug();
-    if( ( strpos($page_slug, 'favorite') !== false ) or ( strpos($page_template, 'ccc-favorite') !== false ) ) {
-      //$page_slug に 'favorite' が含まれているか、もしくは、$page_template に 'ccc-favorite' が含まれている場合
-      $handle = 'ccc_my_favorite-list-js';
+      $handle = 'ccc_my_favorite-list';
       $file = 'list.js';
       wp_register_script( $handle, CCCMYFAVORITE_PLUGIN_URL.'/assets/'.$file, array( 'jquery' ), CCCMYFAVORITE_PLUGIN_VERSION, true );
-      wp_enqueue_script( $handle );
-
       $action = 'ccc_my_favorite-list-action';
       wp_localize_script( $handle, 'CCC_MY_FAVORITE_LIST',
                          array(
@@ -119,7 +100,6 @@ class CCC_My_Favorite {
                            'nonce'  => wp_create_nonce( $action )
                          )
                         );
-    } //endif
   } //endfunction
 
   public function list_posts_action() {
@@ -133,16 +113,4 @@ class CCC_My_Favorite {
     die();
   } //endfunction
 
-
 } //endclass
-
-
-
-
-
-
-
-
-
-
-
