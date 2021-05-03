@@ -3,9 +3,9 @@ Contributors: takashimatsuyama
 Donate link:
 Tags: favorites, likes, accessibility, favorite posts
 Requires at least: 4.8
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.4.0
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,14 @@ The logged-in user's data is saved in the user meta. Other user's data is saved 
 
 For pages with a shortcode for list view ([ccc_my_favorite_list_results]).
 
+If you want, you can change the code for list view yourself.
+
+* **Shortcode:** `[ccc_my_favorite_list_custom_template style=""]`
+
+For pages with a shortcode for custom list view ([ccc_my_favorite_list_custom_template]).
+Add the function (`function ccc_my_favorite_list_custom_template( $my_favorite_post_id ) { }`) for your list view to `your-theme/functions.php`.
+`$my_favorite_post_id` is array.
+
 Detailed usage is under preparation.
 
 == Installation ==
@@ -38,6 +46,9 @@ Detailed usage is under preparation.
 
 
 == Changelog ==
+
+= 1.3.0 =
+Add shortcode for custom list view.
 
 = 1.2.1 =
 [Bug fix] about load JavaScript.

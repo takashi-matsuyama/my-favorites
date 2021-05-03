@@ -7,6 +7,7 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
 
   add_shortcode('ccc_my_favorite_list_menu', array('CCC_My_Favorite_ShortCode_List', 'menu') );
   add_shortcode('ccc_my_favorite_list_results', array('CCC_My_Favorite_ShortCode_List', 'results') );
+  add_shortcode('ccc_my_favorite_list_custom_template', array('CCC_My_Favorite_ShortCode_List', 'custom_template') );
 
   class CCC_My_Favorite_ShortCode_List {
 
@@ -60,6 +61,24 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
         $style = 1;
       }
       $data = '<div id="ccc-my_favorite-list" data-ccc_my_favorites-list-style="'.$style.'" data-ccc_my_favorite-posts_per_page="'.$posts_per_page.'" '.$class.'></div>'; //<!-- /#ccc-my_favorite-list -->
+      return $data;
+    } //endfunction
+
+    public static function custom_template($atts) {
+      wp_enqueue_script( 'ccc_my_favorite-list' );
+      $atts = shortcode_atts(array(
+        "class" => '',
+        "style" => '',
+      ),$atts);
+      if( $atts['style'] ) {
+        $style = $atts['style'];
+      } else {
+        $style = 0;
+      }
+      if( $style !== 'none' ) {
+        wp_enqueue_style( 'ccc_my_favorite-list' );
+      }
+      $data = '<div id="ccc-my_favorite-list" data-ccc_my_favorites-list-style="'.$style.'" data-ccc_my_favorite-posts_per_page="custom_template" '.$class.'></div>'; //<!-- /#ccc-my_favorite-list -->
       return $data;
     } //endfunction
 

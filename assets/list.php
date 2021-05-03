@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
-}
+} //endif
 
 if( ! class_exists( 'CCC_My_Favorite_List' ) ) {
   class CCC_My_Favorite_List {
@@ -19,6 +19,16 @@ if( ! class_exists( 'CCC_My_Favorite_List' ) ) {
         $my_favorite_post_ids = explode(',', $user_favorite_post_ids);
       }
       $my_favorite_post_ids = array_map('htmlspecialchars', $my_favorite_post_ids); // 配列データを一括でサニタイズする
+
+      /*** Return your own list template. ***/
+      if( $_POST['ccc-posts_per_page'] === 'custom_template' ) {
+        if( function_exists( 'ccc_my_favorite_list_custom_template' ) ) {
+          return wp_kses_post( ccc_my_favorite_list_custom_template( $my_favorite_post_ids ) );
+        } else {
+          return __('There are no favorite items.', CCCMYFAVORITE_TEXT_DOMAIN);
+        }
+        exit;
+      } //endif
 
       /*** 表示数の定義（指定が無ければ管理画面の表示設定（表示する最大投稿数）の値を取得） ***/
       $ccc_posts_per_page = absint( $_POST['ccc-posts_per_page'] ); //負ではない整数に変換
