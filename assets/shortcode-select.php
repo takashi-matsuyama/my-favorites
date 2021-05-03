@@ -12,7 +12,8 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_Select' ) ) {
     public static function button($atts) {
       $atts = shortcode_atts(array(
         "post_id" => '',
-        "text" => ''
+        "text" => '',
+        "style" => '',
       ),$atts);
       if( $atts['post_id'] ) {
         $post_id = intval($atts['post_id']);
@@ -25,7 +26,12 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_Select' ) ) {
       } else {
         $text = __('Favorite', CCCMYFAVORITE_TEXT_DOMAIN);
       }
-      $data = '<div class="ccc-favorite-post-toggle"><a href="#" class="ccc-favorite-post-toggle-button" data-post_id-ccc_favorite="'.$post_id.'"><span class="text">'.$text.'</span></a></div>'; //<!-- /.ccc-favorite-post-toggle -->
+      if( $atts['style'] or $atts['style'] === 0 or $atts['style'] === '0' ) {
+        $style = $atts['style'];
+      } else {
+        $style = 1;
+      }
+      $data = '<div class="ccc-favorite-post-toggle" data-ccc_my_favorites-select_button-style="'.$style.'"><a href="#" class="ccc-favorite-post-toggle-button" data-post_id-ccc_favorite="'.$post_id.'"><span class="text">'.$text.'</span></a></div>'; //<!-- /.ccc-favorite-post-toggle -->
       return $data;
     } //endfunction
 
