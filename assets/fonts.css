@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'icomoon-ccc-my_favorite';
+  src:  url('fonts/icomoon-ccc-my_favorite.eot?sjg3cf');
+  src:  url('fonts/icomoon-ccc-my_favorite.eot?sjg3cf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-ccc-my_favorite.ttf?sjg3cf') format('truetype'),
+    url('fonts/icomoon-ccc-my_favorite.woff?sjg3cf') format('woff'),
+    url('fonts/icomoon-ccc-my_favorite.svg?sjg3cf#icomoon-ccc-my_favorite') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-ccc-my_favorite-"], [class*=" icon-ccc-my_favorite-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-ccc-my_favorite' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ccc-my_favorite-heart:before {
+  content: "\f004";
+}
+.icon-ccc-my_favorite-minus-circle:before {
+  content: "\f056";
+}
+.icon-ccc-my_favorite-check-circle:before {
+  content: "\f058";
+}
+.icon-ccc-my_favorite-check-circle-o:before {
+  content: "\f05d";
+}
+.icon-ccc-my_favorite-ban:before {
+  content: "\f05e";
+}
+.icon-ccc-my_favorite-heart-o:before {
+  content: "\f08a";
+}
+.icon-ccc-my_favorite-trash:before {
+  content: "\f1f8";
+}

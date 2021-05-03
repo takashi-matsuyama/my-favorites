@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+#ccc-my_favorite-list {
+  overflow: hidden;
+}
+#ccc-my_favorite-list .clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#ccc-my_favorite-list .header-ccc_favorite {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#ccc-my_favorite-list #ccc-favorite-count {
+  float: left;
+  line-height: 1.3;
+}
+#ccc-my_favorite-list #ccc-favorite-count .number {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0 0.2em 0 0.5em;
+}
+#ccc-my_favorite-list #ccc-favorite-count .unit {
+  font-size: 0.7em;
+}
+#ccc-my_favorite-list .ccc-favorite-post-toggle {
+  margin-top: 0;
+}
+#ccc-my_favorite-list .ccc-favorite-post-toggle > a {
+  color: #666;
+}
+#ccc-my_favorite-list .ccc-favorite-post-toggle > a::before {
+  /* icomoon Font =========== */
+  content: "\f056";
+  /* icomoon Font =========== */
+}
+#ccc-my_favorite-list .post-ccc_favorite {
+  font-size: 0;
+  width: calc(100% + 1%);
+  margin: 30px auto;
+  min-height: 30vh;
+}
+#ccc-my_favorite-list .list-ccc_favorite {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(20% - 1%);
+  margin: 0 1% 1% 0;
+  position: relative;
+}
+
+
+/* SP
+----------------------------------------------------------*/
+@media only screen and (max-width: 750px) {
+  #ccc-my_favorite-list .post-ccc_favorite  {
+    width: calc(100% + 3%);
+  }
+  #ccc-my_favorite-list .list-ccc_favorite {
+    width: calc(50% - 3%);
+    margin: 0 3% 3% 0;
+    font-size: 14px;
+  }
+}

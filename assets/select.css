@@ -1,0 +1,92 @@
+@charset "utf-8";
+@import url('./fonts.css');
+
+.ccc-favorite-post-count > a::before,
+.ccc-favorite-post-toggle > a::before,
+.ccc-favorite-post-delete > a::before {
+  /* icomoon Font =========== */
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-ccc-my_favorite' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* icomoon Font =========== */
+}
+
+.ccc-favorite-post-count {
+  float: right;
+  transition: all 0.3s;
+  margin-right: 12px;
+  display: none; /* JS */
+}
+.ccc-favorite-post-count.active {
+  display: block;
+}
+.ccc-favorite-post-count > a {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 5px 0 10px;
+}
+.ccc-favorite-post-count > a::before {
+  font-size: 16px;
+  margin-right: 0.25em;
+  /* icomoon Font =========== */
+  content: "\f004";
+  /* icomoon Font =========== */
+}
+.ccc-favorite-post-count .num {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.ccc-favorite-post-count .text {
+  font-size: 0;
+  display: none; /* for Safari */
+}
+
+.ccc-favorite-post-toggle {
+  text-align: right;
+  position: relative;
+  z-index: 10;
+}
+.ccc-favorite-post-toggle > a {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0 6px;
+  transition: all 0.3s;
+}
+.ccc-favorite-post-toggle > a::before {
+  /* icomoon Font =========== */
+  content: "\f08a";
+  /* icomoon Font =========== */
+}
+.ccc-favorite-post-toggle > a.save::before {
+  /* icomoon Font =========== */
+  content: "\f004";
+  /* icomoon Font =========== */
+}
+.ccc-favorite-post-toggle > a > .text {
+  display: none;
+}
+.ccc-favorite-post-delete {
+  float: right;
+}
+.ccc-favorite-post-delete > a .text {
+  font-size: 0.7em;
+}
+.ccc-favorite-post-delete > a::before {
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
+  /* icomoon Font =========== */
+  content: "\f1f8";
+  /* icomoon Font =========== */
+}
