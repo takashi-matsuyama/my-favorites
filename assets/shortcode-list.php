@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
   exit; // Exit if accessed directly.
-}
+} //endif
 
 if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
 
@@ -36,8 +36,6 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
     } //endfunction
 
     public static function results($atts) {
-      wp_enqueue_style( 'ccc_my_favorite-select' );
-      wp_enqueue_script( 'ccc_my_favorite-select' );
       wp_enqueue_style( 'ccc_my_favorite-list' );
       wp_enqueue_script( 'ccc_my_favorite-list' );
 

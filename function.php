@@ -30,13 +30,14 @@ class CCC_My_Favorite {
   } //endfunction
 
   public function select_styles() {
-    wp_register_style( 'ccc_my_favorite-select', CCCMYFAVORITE_PLUGIN_URL.'/assets/select.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
+    wp_enqueue_style( 'ccc_my_favorite-select', CCCMYFAVORITE_PLUGIN_URL.'/assets/select.css', array(), CCCMYFAVORITE_PLUGIN_VERSION, 'all');
   } //endfunction
 
   public function select_scripts() {
     $handle = 'ccc_my_favorite-select';
     $file = 'select.js';
     wp_register_script( $handle, CCCMYFAVORITE_PLUGIN_URL.'/assets/'.$file, array( 'jquery' ), CCCMYFAVORITE_PLUGIN_VERSION, true );
+    wp_enqueue_script( $handle );
     $action_update = 'ccc_my_favorite-update-action';
     wp_localize_script( $handle, 'CCC_MY_FAVORITE_UPDATE',
                        array(

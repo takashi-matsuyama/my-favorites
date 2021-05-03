@@ -3,7 +3,7 @@
  * Plugin Name: My Favorites
  * Plugin URI: https://wordpress.org/plugins/my-favorites/
  * Description: Save user's favorite posts and list them.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Requires at least: 4.8
  * Requires PHP: 5.4.0
  * Author: Takashi Matsuyama

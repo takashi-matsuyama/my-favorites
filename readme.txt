@@ -5,7 +5,7 @@ Tags: favorites, likes, accessibility, favorite posts
 Requires at least: 4.8
 Tested up to: 5.6
 Requires PHP: 5.4.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,8 @@ The logged-in user's data is saved in the user meta. Other user's data is saved 
 * **Shortcode:** `[ccc_my_favorite_list_menu slug="" text="" style=""]`
 * **Shortcode:** `[ccc_my_favorite_list_results class="" style=""]`
 
-For pages with a shortcode for list view (`[ccc_my_favorite_list_results]`).
+For pages with a shortcode for list view ([ccc_my_favorite_list_results]).
+
 Detailed usage is under preparation.
 
 == Installation ==
@@ -37,6 +38,9 @@ Detailed usage is under preparation.
 
 
 == Changelog ==
+
+= 1.2.1 =
+[Bug fix] about load JavaScript.
 
 = 1.2.0 =
 Load CSS and JavaScript only when using shortcodes and modify CSS.
