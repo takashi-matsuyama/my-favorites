@@ -16,7 +16,7 @@ if( ! class_exists( 'CCC_Post_Thumbnail' ) ) {
         ob_start();
         ob_end_clean();
         preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post_content, $matches);
-        if( $matches[1][0] ) {
+        if( isset($matches[1][0]) ) {
           $first_img = $matches[1][0]; //投稿本文の中から1枚目の画像のURLを取得
         }
       } // endif

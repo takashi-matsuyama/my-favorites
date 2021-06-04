@@ -3,9 +3,9 @@ Contributors: takashimatsuyama
 Donate link:
 Tags: favorites, likes, accessibility, favorite posts
 Requires at least: 4.8
-Tested up to: 5.7
+Tested up to: 5.6
 Requires PHP: 5.4.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,32 +35,16 @@ Add the function (`function ccc_my_favorite_list_custom_template( $my_favorite_p
 
 Detailed usage is under preparation.
 
+== Discover More ==
+
+This plugin is [developed on GitHub](https://github.com/takashi-matsuyama/my-favorites)
+
 == Installation ==
 
 1. Upload `my-favorites` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Use shortcodes to display the favorite posts list and an icon for save and a menu for link to list.
 
-== Screenshots ==
-
-
-
 == Changelog ==
 
-= 1.3.0 =
-Add shortcode for custom list view.
-
-= 1.2.1 =
-[Bug fix] about load JavaScript.
-
-= 1.2.0 =
-Load CSS and JavaScript only when using shortcodes and modify CSS.
-
-= 1.1.0 =
-Add shortcode attribute (`style=""`) and modify CSS.
-
-= 1.0.1 =
-Modify default slug of shortcode (`[ccc_my_favorite_list_menu slug=""]`) to "favorites" from "ccc-favorite" and modify readme.txt, description.
-
-= 1.0.0 =
-Initial release.
+See the [release notes on GitHub](https://github.com/takashi-matsuyama/my-favorites/releases).

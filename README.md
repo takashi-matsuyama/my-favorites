@@ -2,15 +2,15 @@
 
 This is the development repository for My Favorites, a WordPress plugin that saves user's favorite posts and lists them. You can also download the plugin package installation from the [WordPress.org Plugin Directory](https://wordpress.org/plugins/my-favorites/).
 
-Contributors: takashimatsuyama
-Donate link:
-Tags: favorites, likes, accessibility, favorite posts
-Requires at least: 4.8
-Tested up to: 5.7
-Requires PHP: 5.4.0
-Stable tag: 1.3.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: takashimatsuyama  
+Donate link:  
+Tags: favorites, likes, accessibility, favorite posts  
+Requires at least: 4.8  
+Tested up to: 5.7  
+Requires PHP: 5.4.0  
+Stable tag: 1.3.1  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 Save user's favorite posts and list them.
 
@@ -45,6 +45,9 @@ Detailed usage is under preparation.
 3. Use shortcodes to display the favorite posts list and an icon for save and a menu for link to list.
 
 ## Changelog
+
+### 1.3.1
+Fixed PHP 8.0 warning.
 
 ### 1.3.0
 Add shortcode for custom list view.
