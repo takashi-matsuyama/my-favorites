@@ -8,7 +8,7 @@ Tags: favorites, likes, accessibility, favorite posts
 Requires at least: 4.8  
 Tested up to: 5.7  
 Requires PHP: 5.4.0  
-Stable tag: 1.3.1  
+Stable tag: 1.3.2  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -45,6 +45,9 @@ Detailed usage is under preparation.
 3. Use shortcodes to display the favorite posts list and an icon for save and a menu for link to list.
 
 ## Changelog
+
+### 1.3.2
+Fixed PHP undefined variable notice.
 
 ### 1.3.1
 Fixed PHP 8.0 warning.

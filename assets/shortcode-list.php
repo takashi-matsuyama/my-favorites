@@ -70,6 +70,11 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
         "class" => '',
         "style" => '',
       ),$atts);
+      if( $atts['class'] ) {
+        $class = 'class="'.$atts['class'].'"';
+      } else {
+        $class = null;
+      }
       if( $atts['style'] ) {
         $style = $atts['style'];
       } else {
