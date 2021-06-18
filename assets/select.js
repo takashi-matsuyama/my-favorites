@@ -81,12 +81,12 @@ var CCC = CCC || {};
           }
         }
         /* 配列から「null」や「undefined」、「"" 空文字」が入った要素を削除する */
-        favorite_value_array = favorite_value_array.filter(function(v){
+        favorite_value_array = favorite_value_array.filter(function(v) {
           return !(v === null || v === undefined || v === ""); // 0は除くためfilter(Boolean)は使わない
         });
         /* 保存する投稿の数を制限：配列の数がX個以上ある場合、Y個に減らす */
-        if( favorite_value_array.length > 100 ){
-          favorite_value_array = favorite_value_array.slice( 0, 100 ); /* 開始位置と終了位置を指定（開始位置は0から数えて終了位置の値は含まない） */
+        if( favorite_value_array.length > 300 ) {
+          favorite_value_array = favorite_value_array.slice( 0, 300 ); /* 開始位置と終了位置を指定（開始位置は0から数えて終了位置の値は含まない） */
         }
         favorite_value_array_str = favorite_value_array.join(','); // 配列要素の連結・結合：配列を連結して1つの文字列に変換
         /* ログインユーザーでは無い場合 */

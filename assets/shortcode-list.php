@@ -42,6 +42,7 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
 
       $atts = shortcode_atts(array(
         "class" => '',
+        "excerpt" => '',
         "posts_per_page" => '',
         "style" => '',
       ),$atts);
@@ -49,6 +50,11 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
         $class = 'class="'.$atts['class'].'"';
       } else {
         $class = null;
+      }
+      if( $atts['excerpt'] ) {
+        $excerpt = absint( $atts['excerpt'] );
+      } else {
+        $excerpt = 0;
       }
       if( $atts['posts_per_page'] and ctype_digit($atts['posts_per_page']) ) {
         $posts_per_page = $atts['posts_per_page'];
@@ -60,7 +66,7 @@ if( ! class_exists( 'CCC_My_Favorite_ShortCode_List' ) ) {
       } else {
         $style = 1;
       }
-      $data = '<div id="ccc-my_favorite-list" data-ccc_my_favorites-list-style="'.$style.'" data-ccc_my_favorite-posts_per_page="'.$posts_per_page.'" '.$class.'></div>'; //<!-- /#ccc-my_favorite-list -->
+      $data = '<div id="ccc-my_favorite-list" data-ccc_my_favorites-list-style="'.$style.'" data-ccc_my_favorite-excerpt="'.$excerpt.'" data-ccc_my_favorite-posts_per_page="'.$posts_per_page.'" '.$class.'></div>'; //<!-- /#ccc-my_favorite-list -->
       return $data;
     } //endfunction
 

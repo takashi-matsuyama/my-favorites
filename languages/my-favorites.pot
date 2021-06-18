@@ -7,7 +7,7 @@ msgstr ""
 "Favorites Plugin Pot "
 "v1.0.0\n"
 "POT-Creation-Date: "
-"2021-01-19 18:15+0900\n"
+"2021-06-17 21:10+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -50,29 +50,38 @@ msgstr ""
 "X-Poedit-"
 "SearchPath-0: .\n"
 
-#: assets/list.php:41
+#: assets/list.php:28
+#: assets/list.php:117
+msgid ""
+"There are no favorite "
+"items."
+msgstr ""
+
+#: assets/list.php:65
 msgid "Favorite item"
 msgid_plural ""
 "Favorite items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: assets/list.php:42
+#: assets/list.php:66
 msgid "Delete all"
 msgstr ""
 
-#: assets/list.php:65
-#: assets/shortcode-select.php:26
+#: assets/list.php:106
+#: assets/shortcode-select.php:27
 msgid "Favorite"
 msgstr ""
 
-#: assets/list.php:74
-msgid ""
-"There are no favorite "
-"items."
+#: assets/list.php:110
+msgid "Load More"
 msgstr ""
 
-#: assets/shortcode-list.php:26
+#: assets/list.php:111
+msgid "Loading"
+msgstr ""
+
+#: assets/shortcode-list.php:28
 msgid "Favorites"
 msgstr ""
 

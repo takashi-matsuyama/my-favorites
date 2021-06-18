@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon-ccc-my_favorite';
-  src:  url('fonts/icomoon-ccc-my_favorite.eot?sjg3cf');
-  src:  url('fonts/icomoon-ccc-my_favorite.eot?sjg3cf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon-ccc-my_favorite.ttf?sjg3cf') format('truetype'),
-    url('fonts/icomoon-ccc-my_favorite.woff?sjg3cf') format('woff'),
-    url('fonts/icomoon-ccc-my_favorite.svg?sjg3cf#icomoon-ccc-my_favorite') format('svg');
+  src:  url('fonts/icomoon-ccc-my_favorite.eot?pzf51e');
+  src:  url('fonts/icomoon-ccc-my_favorite.eot?pzf51e#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-ccc-my_favorite.ttf?pzf51e') format('truetype'),
+    url('fonts/icomoon-ccc-my_favorite.woff?pzf51e') format('woff'),
+    url('fonts/icomoon-ccc-my_favorite.svg?pzf51e#icomoon-ccc-my_favorite') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,9 @@
 
 .icon-ccc-my_favorite-heart:before {
   content: "\f004";
+}
+.icon-ccc-my_favorite-refresh:before {
+  content: "\f021";
 }
 .icon-ccc-my_favorite-minus-circle:before {
   content: "\f056";
