@@ -3,9 +3,9 @@ Contributors: takashimatsuyama
 Donate link:
 Tags: favorites, likes, accessibility, favorite posts
 Requires at least: 4.8
-Tested up to: 5.8
+Tested up to: 6.0
 Requires PHP: 5.4.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,7 +59,7 @@ This plugin is [developed on GitHub](https://github.com/takashi-matsuyama/my-fav
 
 == Changelog ==
 
-= 1.4.0 =
-Add a load more button and a shortcode attribute excerpt="" in the list view.
+= 1.4.1 =
+Tested on WordPress 6.0.
 
 See the [release notes on GitHub](https://github.com/takashi-matsuyama/my-favorites/releases).
