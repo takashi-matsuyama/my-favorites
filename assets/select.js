@@ -69,12 +69,18 @@ var CCC = CCC || {};
         /* 選択：お気に入りの投稿を切り替え */
         if (favorite_value === null) {
           var favorite_value_array = []; // 新たに配列を作成
-          favorite_value_array.unshift(post_id); // 配列の最初に1つ以上の要素を追加し、新しい配列の長さを返す
+          favorite_value_array.unshift(String(post_id)); // 配列の最初に1つ以上の要素を追加し、新しい配列の長さを返す
         } else {
           var favorite_value_array = favorite_value.split(','); // カンマで分割して配列にする
+          favorite_value_array = favorite_value_array.map(function (item) {
+            return String(item).trim();
+          })
+          favorite_value_array = favorite_value_array.filter(function onlyUnique(value, index, array) {
+            return array.indexOf(value) === index;
+          });
           var value_index = favorite_value_array.indexOf(String(post_id)); // ストレージの値は文字列に変換しているので、indexOfの指定も数値を文字列に変換する必要がある
           if (value_index === -1) {
-            favorite_value_array.unshift(post_id); // 配列の最初に1つ以上の要素を追加し、新しい配列の長さを返す
+            favorite_value_array.unshift(String(post_id)); // 配列の最初に1つ以上の要素を追加し、新しい配列の長さを返す
           } else {
             //console.log("重複している投稿ID："+ post_id);
             favorite_value_array.splice(value_index, 1); // インデックスn番目から、1つの要素を削除（重複してたら、それを削除）
