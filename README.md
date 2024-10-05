@@ -6,7 +6,7 @@ Contributors: takashimatsuyama
 Donate link:  
 Tags: favorites, likes, accessibility, favorite posts  
 Requires at least: 4.8  
-Tested up to: 6.0  
+Tested up to: 6.6  
 Requires PHP: 5.4.0  
 Stable tag: 1.4.1  
 License: GPLv2 or later  
@@ -57,6 +57,10 @@ Detailed usage is under preparation.
 3. Use shortcodes to display the favorite posts list and an icon for save and a menu for link to list.
 
 ## Changelog
+
+### 1.4.2
+Merge pull request [#4](https://github.com/takashi-matsuyama/my-favorites/pull/4) from [tblobaum](https://github.com/tblobaum)/patch-1  
+> Fixes problems with logged in users as explained here: [WordPress.org Forums](https://wordpress.org/support/topic/plugin-not-working-correctly-for-logged-in-user/)
 
 ### 1.4.1
 Tested on WordPress 6.0.
