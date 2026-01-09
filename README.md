@@ -6,9 +6,9 @@ Contributors: takashimatsuyama
 Donate link:  
 Tags: favorites, likes, accessibility, favorite posts  
 Requires at least: 4.8  
-Tested up to: 6.6  
+Tested up to: 6.9  
 Requires PHP: 5.4.0  
-Stable tag: 1.4.3  
+Stable tag: 1.4.4  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -57,6 +57,9 @@ Detailed usage is under preparation.
 3. Use shortcodes to display the favorite posts list and an icon for save and a menu for link to list.
 
 ## Changelog
+
+### 1.4.4
+Security Fix: Stored XSS vulnerability in shortcode attributes (CVE-2024-37114). See [issue #8](https://github.com/takashi-matsuyama/my-favorites/issues/8) for details.
 
 ### 1.4.3
 Add escapes to attributes to prevent XSS attacks
